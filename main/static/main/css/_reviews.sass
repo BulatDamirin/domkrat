@@ -1,0 +1,43 @@
+.reviews
+    background: #2B2B2C url('../img/reviews-bg.jpg') no-repeat center
+    background-size: cover
+
+.reviews-main-block 
+    margin-top: 75px
+
+    @media screen and ( max-width: $tablet )
+        flex-direction: column
+        margin-top: 60px
+
+    @media screen and ( max-width: $mobile )
+        margin-top: 40px
+
+.reviews-video-container
+    width: 62%
+
+    @media screen and ( max-width: $tablet )
+        width: 100%
+
+.video
+    width: 100%
+    height: 0
+    padding-top: 56.25%
+    position: relative
+
+    video
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+
+.reviews-form
+    width: 33%
+
+    @media screen and ( max-width: $tablet )
+        margin-top: 20px
+        width: 100%
+        text-align: right
+
+    @media screen and ( max-width: $mobile )
+        width: 100%
+        text-align: center

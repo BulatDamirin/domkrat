@@ -1,0 +1,181 @@
+// head
+
+.head
+    padding: 40px 2.5% 30px 0
+    box-sizing: border-box
+    background: #EDEDED 
+    min-height: calc(100vh - 80px)
+
+    @media screen and ( max-width: $tablet )
+        min-height: auto
+
+    @media screen and ( max-width: $mobile )
+        padding: 20px 2.5% 10px 0
+
+    @media screen and ( max-width: $mobile )
+        padding: 20px 0 10px 0
+
+    .container
+        @media screen and ( max-width: $tablet )
+            width: 100%
+        
+        @media screen and ( max-width: $mobile )
+            width: 95%
+
+.head-title
+    text-align: center
+    font-family: $play
+    font-weight: bold
+
+    @media screen and ( max-width: $tablet )
+        padding-left: 2.5%
+
+    @media screen and ( max-width: $mobile )
+        padding-left: 0
+
+    &__title
+        font-size: 45px
+        margin-bottom: 5px
+
+        @media screen and ( max-width: $tablet )
+            font-size: 35px
+
+        @media screen and ( max-width: $mobile )
+            font-size: 30px
+            margin-bottom: 15px
+    
+    &__subtitle
+        font-family: $roboto
+        font-size: 30px
+
+        @media screen and ( max-width: $tablet )
+            font-size: 25px
+
+        @media screen and ( max-width: $mobile )
+            font-size: 20px
+
+.head-main-block
+    background: #EDEDED url(../img/1-head/head-domkrat.png) center no-repeat
+    padding: 90px 0 50px 0
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: space-between
+
+    @media screen and (max-width: $tablet)
+        // background: #EDEDED url(../img/1-head/head-domkrat-reflection.png) center no-repeat
+        flex-direction: column
+        background-position: left
+        background-size: auto 100%
+        align-items: flex-end
+        padding: 0
+        margin: 50px 0
+    
+    @media screen and (max-width: 850px)
+        background-position-x: -15%
+
+    @media screen and (max-width: 800px)
+        background-position-x: -25%
+
+    @media screen and (max-width: 780px)
+        background-position-x: -65%
+
+    @media screen and ( max-width: $mobile )
+        background-position: center
+        
+
+    &__form
+        width: 380px
+
+        @media screen and (max-width: $mobile)
+            width: 100%
+            display: flex
+            justify-content: center
+
+    &__discount
+        display: flex
+        
+        @media screen and (max-width: $tablet)
+            margin-bottom: 20px
+
+        @media screen and (max-width: $mobile)
+            width: 100%
+            margin-bottom: 250px
+            background: rgba(255, 255, 255, .9)
+
+
+        .stick
+            width: 4px
+            background: #F16805
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 4px
+            margin-right: 8px
+
+        .discount-description
+            h3
+                font-size: 22px
+                font-weight: 400
+            h2
+                color: $orange
+                font-size: 33px
+                font-weight: 33px
+
+            img
+                width: 260px
+
+            p
+                font-size: 14px
+
+.head-pains
+    display: flex
+    justify-content: space-between
+
+    @media screen and (max-width: $tablet)
+        justify-content: space-around
+        padding-left: 2.5%
+        flex-wrap: wrap
+
+    @media screen and (max-width: $mobile)   
+        padding-left: 0
+
+    @media screen and (max-width: 450px)
+        justify-content: flex-start
+        
+
+    &__pain
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        
+        h3
+            font-size: 18px
+            margin: 3px 0 4px 0
+
+            @media screen and (max-width: 450px)
+                margin: 0
+
+        p
+            font-size: 16px
+
+        @media screen and (max-width: $tablet)
+            width: 30%
+            margin-bottom: 30px
+
+        @media screen and (max-width: 680px)
+            width: 46%
+
+        @media screen and (max-width: 450px)
+            width: 100%
+            flex-direction: row
+            text-align: left
+
+            br
+                display: none
+
+    &__svg
+        @media screen and (max-width: 450px)
+            width: 48px
+            display: flex
+            justify-content: center
+            margin-right: 10px

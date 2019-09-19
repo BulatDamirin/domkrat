@@ -1,0 +1,132 @@
+.header 
+    background: #2B2B2C
+    position: relative
+    z-index: 2
+
+.navbar
+    height: 80px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #fff
+
+.messenger-number 
+    position: absolute
+    bottom: -190px
+    left: calc(50% - 150px)
+    width: 300px
+    height: 400px
+    transition: .3s
+    opacity: 0
+    transform: perspective(1000px) rotate3d(180,0,0,91deg);
+
+    &__transparent
+        height: 55%
+
+    &__white
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+        border-radius: 2px
+        box-sizing: border-box
+        background: #fff
+        position: relative
+        padding: 20px   
+        display: flex
+        flex-direction: column
+
+        h3  
+            margin-top: 20px
+            font-size: 24px
+    
+    &__close
+        position: absolute
+        cursor: pointer
+        right: 0
+        top: 0
+        padding: 10px
+        svg
+            width: 15px
+            height: 15px
+
+.messenger-number-active
+    opacity: 1
+    transform: perspective(1000px) rotate3d(180,0,0,0deg);
+        
+        
+
+.navbar-logo 
+    display: flex
+    width: 42%
+
+    &__logo
+        display: flex
+        align-items: center
+
+    &__description
+        margin-left: 10px
+        
+        p
+            font-weight: 300
+            font-size: 14px
+            line-height: 18px
+
+.navbar-messenger 
+    display: flex
+    justify-content: center
+    text-align: center
+    align-items: center
+    height: 40px
+    cursor: pointer
+    width: 16%
+
+    &:hover
+        svg, path
+            fill: #fff
+
+    div
+        display: flex
+        align-items: center
+        margin: 0 5px
+
+.navbar-data
+    width: 42%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    &__language
+        margin-right: 50px
+
+        a
+            color: #fff
+            font-weight: 300
+            font-size: 18px
+            text-transform: uppercase
+            margin-right: 10px
+    
+        .language-main
+            font-weight: bold
+
+    &__email 
+        color: #F15A05
+        font-weight: bold
+        display: block
+        font-size: 14px
+        text-align: right
+
+    &__phone
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        font-size: 26px
+        font-family: $play
+
+        div
+            display: flex
+            align-items: center
+            margin-right: 4px
+
+    &__description
+        font-size: 12px
+        font-weight: 300
+        color: #ECECEC

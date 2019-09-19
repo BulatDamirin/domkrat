@@ -1,0 +1,328 @@
+$roboto: 'Roboto', sans-serif
+$play: 'Play', sans-serif
+$black: #373D44
+$orange: #F15A05
+$white: #F2F2F2   
+$border: 2px solid $orange
+$mobile: 719px
+$tablet: 1199px
+
+body
+    margin: 0
+    padding: 0
+    font-size: 18px
+    font-weight: 400
+    font-family: $roboto
+    color: $black;
+
+    @media screen and ( max-width: $tablet )
+        font-size: 17px
+
+    @media screen and ( max-width: $mobile )
+        font-size: 16px
+
+img, video
+    max-width: 100%
+    border: none
+    width: 100%
+
+p, h1, h2, h3, h4
+    margin: 0
+
+input, button, img, a, picture, video
+    outline: none
+
+a 
+    text-decoration: none
+
+section
+    padding: 70px 0
+
+    @media screen and ( max-width: $tablet )
+        padding: 50px 0
+
+    @media screen and ( max-width: $mobile )
+        padding: 30px 0
+
+.hide
+    display: none !important
+
+.hide-on-desctop
+    @media screen and (min-width: $tablet)
+        display: none !important
+
+.hide-on-mobile
+    @media screen and (max-width: $mobile)
+        display: none !important 
+
+.hide-on-tablet
+    @media screen and (max-width: $tablet)
+        display: none !important      
+
+.show-in-mobile
+    @media screen and (min-width: $mobile)
+        display: none !important
+
+.show-in-tablet
+    @media screen and (min-width: $tablet)
+        display: none !important
+
+
+.j-con-space-a
+    display: flex
+    justify-content: space-around
+
+.j-con-space-b
+    display: flex
+    justify-content: space-between
+
+.list-icon
+    display: flex
+    align-items: center
+    div
+        display: flex
+        align-items: center
+
+
+.popup-container-block
+    height: 100%
+    display: flex
+    align-items: center
+
+.popup-before-submit-form
+    position: relative;
+    background: #fff;
+    padding: 25px;
+    width: 100%
+    max-height: 100vh
+    height: 300px
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-end
+
+    &-title
+        width: 80%
+        &__title
+            color: $orange
+            font-family: $play
+            font-size: 20px
+            margin-bottom: 8px
+
+        @media screen and ( max-width: $mobile )
+            width: 100%
+
+    &__img
+        position: absolute
+        bottom: 0
+        left: 0 
+        width: 30%
+        height: auto
+
+    &-phone
+        text-align: right
+        &__phone
+            color: $orange
+            font-family: $play
+            font-size: 32px
+
+        &__title
+            font-size: 20px
+
+        @media screen and ( max-width: $mobile )
+            &__phone
+                font-size: 25px
+
+            &__title
+                font-size: 16px
+            
+
+.popup-before-click-button
+    height: 100%
+    margin: auto
+    width: 380px
+    max-width: 100%
+    position: relative
+    box-sizing: border-box
+    display: flex
+    align-items: center
+
+    .input-country
+        padding: 0
+        
+
+
+.download
+    display: flex
+    align-items: center
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration-line: underline;
+    color: $black
+    transition: .2s
+
+    &:hover
+
+    div 
+        display: flex
+        align-items: center
+        margin-right: 10px
+
+
+.form
+    height: auto !important
+    max-height: 100%
+    width: 100%
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    align-items: center
+    border: 5px solid #F16805
+    padding: 16px
+    background: rgba(255, 255, 255, .9)
+    border-radius: 2px
+        
+
+    @media screen and (max-height: 420px) 
+        overflow: auto
+
+    &__title
+        text-align: center
+        color: $orange
+        font-size: 22px
+        font-weight: bold
+        margin-bottom: 20px
+
+    &__list       
+        color: $black
+        font-size: 17px
+        margin-bottom: 3px
+
+        @media screen and ( max-width: $mobile )
+            font-size: 15px
+
+
+    &__list-block
+        width: 100%
+
+
+    &__input
+        width: 100%
+        display: flex
+        flex-direction: column
+        margin: 18px 0 10px 0
+
+        input
+            background: #FFF8F1
+            border: 1px solid #E5E5E5
+            font-size: 16px 
+            padding: 15px
+            margin-bottom: 12px
+            border-radius: 2px
+            font-weight: 300
+            color: #5e5555
+            transition: 0.3s
+
+        input::placeholder
+            font-weight: 300
+            color: $black
+
+    &__input-phone
+        display: flex
+        justify-content: space-between
+        .input-country
+            box-sizing: border-box
+            width: 20%
+            text-align: center
+
+        .input-phone
+            box-sizing: border-box
+            width: 79%
+
+    &__confidentiality
+        font-size: 14px
+        color: #9D9393
+        text-align: center
+        margin-top: 15px
+
+        a 
+            color: #9D9393
+
+        @media screen and ( max-width: $mobile )
+            font-size: 13px
+
+.button
+    width: 175px
+    background: linear-gradient(180deg, #F16805 0%, #E8562A 65.89%);
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.12)
+    border: none
+    border-radius: 30px
+    color: #fff
+    transition: .2s
+    text-transform: uppercase
+    font-weight: bold
+    font-family: $roboto
+    font-size: 14px
+    padding: 15px 0
+    cursor: pointer
+
+    &:hover
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149)
+
+    &:active
+        background: linear-gradient(180deg, #FD6200 -143%, #E94B1C -76.33%)
+
+
+.container
+    max-width: 1200px
+    width: 95%
+    margin: 0 auto
+
+.orange
+    color: $orange
+
+.white
+    color: $white
+
+
+.title
+    text-align: center
+    font-family: $play  
+
+    h2
+        font-weight: bold
+        font-size: 36px
+        margin-bottom: 10px
+
+        @media screen and ( max-width: $tablet )
+            font-size: 30px
+
+        @media screen and ( max-width: $mobile )
+            font-size: 24px
+
+    p
+        font-size: 32px
+
+        @media screen and ( max-width: $tablet )
+            font-size: 26px
+
+        @media screen and ( max-width: $mobile )
+            font-size: 20px
+
+
+@import header
+@import head
+@import comparison
+@import types
+@import appointment
+@import price
+@import experience
+@import reviews
+    
+
+
+

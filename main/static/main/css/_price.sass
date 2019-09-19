@@ -1,0 +1,135 @@
+.price
+    background: #2B2B2C url('../img/price-bg.jpg') center no-repeat
+    background-size: cover
+
+.price-main-block
+    margin-top: 70px
+
+    @media screen and ( max-width: $tablet )
+        margin-top: 60px
+
+    @media screen and ( max-width: $mobile )
+        margin-top: 40px
+
+.price-types-block
+    width: 100%
+    align-items: center
+    margin-bottom: 40px
+
+    .price-type
+        cursor: pointer
+        width: 29%
+        padding: 10px 0
+        border: $border
+        color: $white
+        border-radius: 2px
+        text-align: center
+        transition: .2s
+
+        &:hover
+            background: rgba(211, 76, 1, 0.31);
+
+    .price-type-active
+        background: $orange
+    
+        &:hover
+            background: $orange
+
+.price-info
+    @media screen and ( max-width: $mobile )
+        flex-direction: column
+
+.price-images 
+    width: 40%
+
+    @media screen and ( max-width: $tablet )
+        width: 50%
+
+    @media screen and ( max-width: $mobile )
+        width: 100%
+
+    &__description
+        margin-top: 5px
+        font-style: italic
+        font-weight: 300
+        font-size: 18px
+
+
+.price-main-image
+
+.price-side-images
+    margin-top: 25px
+    &__elem 
+        width: 47%
+
+.price-description
+    width: 50%
+    color: $white
+    font-size: 20px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    @media screen and ( max-width: $tablet )
+        font-size: 18px
+        width: 40%
+
+    @media screen and ( max-width: $mobile )
+        font-size: 16px
+        width: 100%
+
+    .download
+        line-height: 46px
+        margin-bottom: 40px
+
+    &__text
+        font-style: italic
+        font-weight: 300
+        font-size: 17px
+        line-height: 20px
+
+        @media screen and ( max-width: $tablet )
+            font-size: 16px
+            margin-bottom: 15px
+            br 
+                display: none
+
+        @media screen and ( max-width: $mobile )
+            font-size: 15px
+
+.price-button
+    margin-top: 45px
+    align-items: center
+    width: 100%
+
+    @media screen and ( max-width: $tablet )
+        flex-direction: column
+        margin-top: 20px
+        width: 100%
+        align-items: flex-end
+
+    @media screen and ( max-width: $mobile )
+        align-items: center
+
+
+.materials-list
+    flex-wrap: wrap
+
+    &__elem
+        height: 30px
+        margin-bottom: 10px
+        text-align: right
+
+        @media screen and ( max-width: $tablet )
+            display: flex
+            justify-content: space-between
+            border-bottom: 1px dashed $white
+            width: 100%
+            text-align: left
+
+        @media screen and ( max-width: $mobile )
+            width: 100%
+            
+
+
+    

@@ -1,0 +1,112 @@
+.types
+    background: #DDDDDD
+
+.types-title
+    text-align: left
+
+    &__subtitle
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+.types-main-block
+    margin-top: 40px
+
+.types-elem
+    box-sizing: border-box
+    width: 100%
+    margin-top: 30px
+    height: 50px
+    overflow: hidden
+    transition: all .3s ease
+
+    &-active
+        .types-elem
+            &__arrow
+                border-top: 8px solid $white
+                transform: translateY(-65%) rotate(-180deg);
+
+
+            &__title
+                background: $orange
+                color: $white
+                font-weight: bold
+                height: auto
+
+            &__body
+                opacity: 1
+
+    &__title
+        font-family: $play
+        cursor: pointer
+        position: relative
+        height: 50px
+        box-sizing: border-box
+        width: 23%
+        background: #fff
+        border: $border
+        padding: 0 10px 10px 10px
+
+        img
+            width: 100%
+            margin-top: 49px
+            height: auto
+
+        p
+            position: absolute
+            top: 23px
+            transform: translateY(-50%)
+
+    &__arrow
+        position: absolute
+        transition: .4s ease
+        top: 24px
+        right: 10px
+        transform: translateY(-50%) rotate(-90deg)
+
+    &__body
+        border-top: $border
+        border-bottom: $border
+        width: 70%
+        opacity: 0
+        padding: 0 10px
+
+    &__block
+        margin: 30px 0
+
+    &__description
+        display: flex
+        &-text
+            margin-right: 30px
+            h4
+                font-family: $roboto
+                font-style: italic
+                font-weight: 600
+                margin-bottom: 10px
+
+            p
+                margin-left: 8px
+
+        &-block
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            padding: 15px
+
+            &-elem
+                margin: 8px 0
+
+                p
+                    margin-left: 8px
+
+
+    &__price
+        p
+            font-size: 24px
+
+        h3
+            font-size: 30px
+            font-weight: 900
+
+        .types-button
+            margin-top: 20px
