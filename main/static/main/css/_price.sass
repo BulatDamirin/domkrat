@@ -56,11 +56,36 @@
 
 
 .price-main-image
+    display: inherit
+    picture, img
+        display: inherit
+    @media screen and ( max-width: $mobile )
+        width: 65%
+
+
+.price-images-list
+    @media screen and ( max-width: $mobile )
+        display: flex
+        justify-content: space-between
 
 .price-side-images
     margin-top: 25px
+
+    @media screen and ( max-width: $mobile )
+        flex-direction: column
+        margin-top: 0
+        width: 30%
+        align-items: flex-end
+
+
     &__elem 
+        display: inherit
         width: 47%
+        @media screen and ( max-width: $mobile )
+            width: 100%
+
+        picture, img
+            display: inherit
 
 .price-description
     width: 50%
@@ -81,6 +106,9 @@
     .download
         line-height: 46px
         margin-bottom: 40px
+
+        @media screen and ( max-width: $mobile )
+            margin: 20px 0
 
     &__text
         font-style: italic

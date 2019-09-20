@@ -1,6 +1,17 @@
 
 
 $(document).ready(function() {
+    function launchFullScreen(element) {
+        if(element.requestFullScreen) {
+          element.requestFullScreen();
+        } else if(element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if(element.webkitRequestFullScreen) {
+          element.webkitRequestFullScreen();
+        }
+      }
+    
+    // launchFullScreen(document.documentElement)
     function inputMask() {
         $('.input-country').mask('+9?99')
         $('.input-phone').mask('(999) 999-99-99', {autoclear: false})
@@ -12,13 +23,14 @@ $(document).ready(function() {
     
     if ($(window).width() > tablet) {
         $('.comparison-elem:first').css('height', $('.comparison-elem:first').prop('scrollHeight')).addClass('comparison-elem-active');
-        $('.types-elem:first').css('height', $('.types-elem:first').prop('scrollHeight'));
+        $('.types-elem:first').css('height', $('.types-elem:first').prop('scrollHeight')).addClass('types-elem-active');
     }
 
     var csrfToken = $('[name=csrfmiddlewaretoken]').val();
     var static = $('#static').val();
 
-    
+    $('.new-elem').height($(window).height())
+
 
     function formSubmit() {
         $('.form').on('submit', function(e) {
@@ -212,11 +224,21 @@ $(document).ready(function() {
 
     $('.types-elem__title').click(function() {
         var parent = $(this).parent();
-        var height = parent.prop('scrollHeight');
-        $('.types-elem').removeClass('types-elem-active').css('height', 50);
-
-        parent.addClass('types-elem-active')
-        parent.css('height', height);
+        var height = parent.get(0).scrollHeight;
+        if ($(window).width() <= tablet) {
+            if (parent.hasClass('types-elem-active-mobile')) {
+                parent.removeClass('types-elem-active-mobile').css('height', 50)
+            } else {
+                parent.addClass('types-elem-active-mobile')
+                parent.css('height', height)
+                
+            }
+        } else {
+            $('.types-elem').removeClass('types-elem-active').css('height', 50);
+            parent.addClass('types-elem-active')
+            parent.css('height', height);
+        }
+        
     })
 
     $('.price-type').click(function(){

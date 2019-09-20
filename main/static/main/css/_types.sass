@@ -18,7 +18,26 @@
     margin-top: 30px
     height: 50px
     overflow: hidden
+    touch-action: none
     transition: all .3s ease
+
+    @media screen and ( max-width: $tablet )
+        display: block
+        
+
+
+    &-active-mobile
+        .types-elem
+            &__title
+                background: $orange
+                color: $white
+                font-weight: bold
+            &__arrow
+                border-top: 8px solid $white
+                transform: translateY(-65%) rotate(-180deg);
+            &__body
+                border: 0
+                opacity: 1  
 
     &-active
         .types-elem
@@ -47,6 +66,11 @@
         border: $border
         padding: 0 10px 10px 10px
 
+        @media screen and ( max-width: $tablet )
+            width: 100%
+            img
+                display: none
+
         img
             width: 100%
             margin-top: 49px
@@ -66,18 +90,75 @@
 
     &__body
         border-top: $border
+        transition: .3s
         border-bottom: $border
         width: 70%
         opacity: 0
+        overflow: hidden
         padding: 0 10px
+        box-sizing: border-box
+
+        picture 
+            display: none
+
+        @media screen and ( max-width: $tablet )
+            padding: 0
+            width: 100%
+            picture 
+                display: block
+            
 
     &__block
         margin: 30px 0
+        @media screen and ( max-width: $tablet )
+            flex-direction: column
+            margin: 0
+            
 
     &__description
         display: flex
+
+        @media screen and ( max-width: $tablet )
+            margin-top: 15px
+            width: 100%
+            justify-content: space-between
+
+
+        @media screen and ( max-width: 850px )
+            display: block
+
+        @media screen and ( max-width: $mobile )
+            margin-top: 5px
+
+        &-mobile
+            @media screen and ( max-width: $tablet )
+                display: flex
+                width: 55%
+                flex-direction: row-reverse
+                justify-content: space-between
+
+                picture
+                    width: 50%
+
+                .types-elem__description-text
+                    width: 45%
+
+            @media screen and ( max-width: 850px )
+                width: 100%
+
+            @media screen and ( max-width: 450px)
+                flex-direction: column
+
+                picture
+                    width: 100%
+
+                .types-elem__description-text
+                    width: 100%
+            
         &-text
             margin-right: 30px
+            @media screen and ( max-width: $tablet )
+                margin: 20px 0
             h4
                 font-family: $roboto
                 font-style: italic
@@ -93,8 +174,17 @@
             border-radius: 5px;
             padding: 15px
 
+            @media screen and ( max-width: $tablet )
+                padding: 5px
+                background: none
+                box-shadow: none
+
             &-elem
                 margin: 8px 0
+
+                img
+                    width: auto
+                    max-width: none
 
                 p
                     margin-left: 8px
@@ -104,9 +194,21 @@
         p
             font-size: 24px
 
+        @media screen and ( max-width: $tablet )
+            display: flex
+            flex-direction: column
+            margin-top: 20px
+
+        @media screen and ( max-width: $mobile )
+            align-items: center
+
+
         h3
             font-size: 30px
             font-weight: 900
 
         .types-button
             margin-top: 20px
+
+            @media screen and ( max-width: $mobile )
+                margin-top: 10px
