@@ -120,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.0.40', '192.168.43.119', '192.168.43.51']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.0.40', '192.168.43.119', '192.168.43.51', '198.168.0.103', '192.168.0.102']
 
 STATIC_URL = '/static/'
 

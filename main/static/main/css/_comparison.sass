@@ -1,12 +1,3 @@
-.triangle
-    width: 0
-    z-index: 2
-    height: 0 
-    transition: all .3s ease    
-    border-left: 6px solid transparent
-    border-right: 6px solid transparent
-    border-top: 8px solid $orange
-    
 .comparison
     background: #2B2B2C url('../img/comparison-bg.jpg') no-repeat center
     background-position: top
@@ -22,39 +13,56 @@
         margin-top: 35px
 
 .comparison-elem
-    margin-top: 30px
-    height: 50px
+    margin-top: 30px 
     color: $white
     font-size: 16px
-    transition: .5s ease
-    overflow: hidden
+    transition: .5s ease 
 
-    @media screen and ( max-width: $tablet )
-        display: block
+    &__body
+        border-top: $border
+        box-sizing: border-box
+        border-bottom: $border
+        margin-top: 25px
+        width: 60%
+        transition: all .5s ease
+        font-size: 18px
+        padding: 0 10px
 
-    &-active
-        .comparison-elem__body
-            opacity: 1
+        @media screen and ( max-width: $tablet )
+            width: 100%
+            border-top: 0
+            margin: 0
 
-        .comparison-elem__title
-            color: #151617
-
-            @media screen and ( max-width: $tablet )
-                    color: $white
-
-            &::after, &::before
-                background: $orange
-
-                @media screen and ( max-width: $tablet )
-                    background: transparent
-        
-        .comparison-elem__arrow
-            border-top: 8px solid $black;
-            transform: translateY(-65%) rotate(-180deg);
-
-            @media screen and ( max-width: $tablet )
-                border-top: 8px solid $orange;
+        @media screen and ( max-width: $tablet )
+            font-size: 16px
             
+        p
+            margin: 12px 0
+            font-weight: 300
+
+    &__block
+        padding: 30px 0
+        box-sizing: border-box
+
+    &__download
+        margin: 20px 0 12px 0
+
+        a
+            color: $white
+            text-decoration: underline
+            font-style: italic
+            display: flex
+            justify-content: flex-end
+
+            span
+                margin-right: 10px
+                display: flex
+                align-items: center
+
+    &__arrow
+        position: absolute
+        top: 51%
+        right: 9%
 
     &__title
         box-sizing: border-box
@@ -80,11 +88,9 @@
             width: 85%
 
         &:hover
-            .comparison-elem__arrow
-                border-top: 8px solid $black;
-
-                @media screen and ( max-width: $tablet )
-                    border-top: 8px solid $orange;
+            .uncover-elem__arrow
+                @media screen and ( min-width: $tablet )
+                    border-top: 8px solid $black
 
             &::after, &::before
                 background: $orange
@@ -107,7 +113,7 @@
             top: 0
             border-bottom: 0
             border-top: $border
-            transform: skew(30deg);
+            transform: skew(30deg)
 
         &::after
             bottom: 0
@@ -115,57 +121,61 @@
             border-bottom: $border
             transform: skew(-30deg)
 
-    &__arrow
-            position: absolute
-            top: 51%
-            right: 9%
-            transform: translateY(-50%) rotate(-90deg)
+.uncover-elem
+    height: 50px
+    overflow: hidden
+    align-items: flex-start
 
-    
+    @media screen and ( max-width: $tablet )
+        display: block
+
     &__body
-        border-top: $border
-        box-sizing: border-box
-        border-bottom: $border
         opacity: 0
-        margin-top: 25px
-        width: 60%
-        transition: all .5s ease
-        font-size: 18px
-        padding: 0 10px
 
-        @media screen and ( max-width: $tablet )
-            width: 100%
-            border-top: 0
-            margin: 0
+    &__arrow
+        width: 0
+        z-index: 2
+        height: 0 
+        transition: all .3s ease    
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        border-top: 8px solid $orange
+        transform: translateY(-50%) rotate(-90deg)
 
-        @media screen and ( max-width: $tablet )
-            font-size: 16px
-            
-        p
-            margin: 12px 0
-            font-weight: 300
+    &-active
+        .uncover-elem__body
+            opacity: 1
 
-            
+        .comparison-elem__title
+            color: #151617
+            &::after, &::before
+                background: $orange
 
-
-    &__block
-        margin: 30px 0
-        box-sizing: border-box
-
-    
-    &__download
-        margin: 20px 0 12px 0
-
-        a
+        .types-elem__title
             color: $white
-            text-decoration: underline
-            font-style: italic
-            display: flex
-            justify-content: flex-end
+            background: $orange
 
-            span
-                margin-right: 10px
-                display: flex
-                align-items: center
+        .uncover-elem__arrow
+            transform: translateY(-65%) rotate(-180deg)
+            border-top: 8px solid $black
+
+        &-mobile
+            .uncover-elem__body
+                opacity: 1
+                border: none
+
+            .comparison-elem__title
+                font-weight: bold
+                &::after, &::before
+                    background: $orange
+
+            .types-elem__title
+                background: $orange
+                color: $white
+                
+            .uncover-elem__arrow
+                border-top: 8px solid $white
+                transform: translateY(-65%) rotate(-180deg)
+
 
 

@@ -54,12 +54,12 @@
     }
 </style>
 <body> 
-    <div class="new-elem">
+    <!-- <div class="new-elem">
         <div class="margin">
             
         </div>
         
-    </div>
+    </div> -->
     <div class="hide" id="form-container">
         <div class="popup-before-click-button" id="modal-button">
             <form class="form" action="" method="POST">
@@ -336,12 +336,12 @@
                 <p class="comparison-title__subtitle">Преимущества работы с домкратом CONER&trade;</p>
             </div>
             <div class="comparison-main-block">
-                <div class="comparison-elem j-con-space-a" style="height: 50px">
+                <div class="comparison-elem j-con-space-a uncover-elem" style="height: 50px">
                     <div class="comparison-elem__title">
                         <p>В сравнении с термическим натяжением</p>
-                        <div class="comparison-elem__arrow triangle"></div>
+                        <div class="comparison-elem__arrow uncover-elem__arrow"></div>
                     </div>
-                    <div class="comparison-elem__body">
+                    <div class="comparison-elem__body uncover-elem__body">
                         <div class="comparison-elem__block">
                             <p>Увеличивается скорость (исключаются процессы нагрева и охлаждения)</p>
                             <p>Сокращение персонала до 1 человека</p>
@@ -370,12 +370,12 @@
                         </div>           
                     </div>
                 </div>
-                <div class="comparison-elem j-con-space-a">
+                <div class="comparison-elem uncover-elem j-con-space-a">
                     <div class="comparison-elem__title">
                         <p>В сравнении с зарубежными аналогами</p>
-                        <div class="comparison-elem__arrow triangle"></div>
+                        <div class="comparison-elem__arrow uncover-elem__arrow"></div>
                     </div>
-                    <div class="comparison-elem__body">
+                    <div class="comparison-elem__body uncover-elem__body">
                         <div class="comparison-elem__block">
                             <p>Цена в 3 раза ниже</p>
                             <p>Отгрузка запчастей в день обращения</p>
@@ -386,12 +386,12 @@
                         
                     </div>
                 </div>
-                <div class="comparison-elem j-con-space-a">
+                <div class="comparison-elem uncover-elem j-con-space-a">
                     <div class="comparison-elem__title">
                         <p>В сравнении с российскими аналогами</p>
-                        <div class="comparison-elem__arrow triangle"></div>
+                        <div class="comparison-elem__arrow uncover-elem__arrow"></div>
                     </div>
-                    <div class="comparison-elem__body">
+                    <div class="comparison-elem__body uncover-elem__body">
                         <div class="comparison-elem__block">
                             <p>Проходной гидроцилиндр напрягает любую длину арматурного элемента</p>
                             <p>Закрытый корпус защищает от механических повреждений</p>
@@ -426,15 +426,15 @@
                 </div>
             </div>
             <div class="types-main-block">
-                <div class="types-elem j-con-space-b">
+                <div class="types-elem uncover-elem j-con-space-b">
                     <div class="types-elem__title">
                         <p>Проволочное натяжение</p>
-                        <div class="types-elem__arrow triangle"></div>
+                        <div class="types-elem__arrow uncover-elem__arrow"></div>
                         <picture>
                             <img src="{% static 'main/img/3-types/3-dom.jpg' %}" alt="">
                         </picture>
                     </div>
-                    <div class="types-elem__body">
+                    <div class="types-elem__body uncover-elem__body">
                         <div class="types-elem__block j-con-space-b">
                             
                             <div class="types-elem__description">
@@ -486,121 +486,123 @@
                         
                     </div>
                 </div>
-                <div class="types-elem j-con-space-b">
+                <div class="types-elem uncover-elem j-con-space-b">
                     <div class="types-elem__title">
-                        <p>Арматурное натяжение</p>
-                        <div class="types-elem__arrow triangle"></div>
+                        <p>Проволочное натяжение</p>
+                        <div class="types-elem__arrow uncover-elem__arrow"></div>
                         <picture>
                             <img src="{% static 'main/img/3-types/3-dom.jpg' %}" alt="">
                         </picture>
                     </div>
-                    <div class="types-elem__body">
-                            <div class="types-elem__block j-con-space-b">
-                                    <div class="types-elem__description">
-                                        <div class="types-elem__description-mobile">
-                                            <div class="types-elem__description-text">   
-                                                <h4>Напрягаемый элемент</h4>                       
-                                                <div class="list-icon">
-                                                    <div>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.016" height="7.042" viewBox="0 0 14.016 7.042">
-                                                            <path id="Vector" d="M11.221.743,10.367,0,6.544,3.331l.853.743ZM13.781,0,7.394,5.556,4.879,3.367l-.853.743L7.394,7.042l7.237-6.3ZM.615,4.11,3.984,7.042,4.837,6.3,1.469,3.367Z" transform="translate(-0.615)" fill="#f15a05"/>
-                                                        </svg>         
-                                                    </div>
-                                                    <p>Проволока 5мм</p>
-                                                </div>                                                   
+                    <div class="types-elem__body uncover-elem__body">
+                        <div class="types-elem__block j-con-space-b">
+                            
+                            <div class="types-elem__description">
+                                <div class="types-elem__description-mobile">
+                                    <div class="types-elem__description-text">   
+                                        <h4>Напрягаемый элемент</h4>                       
+                                        <div class="list-icon">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14.016" height="7.042" viewBox="0 0 14.016 7.042">
+                                                    <path id="Vector" d="M11.221.743,10.367,0,6.544,3.331l.853.743ZM13.781,0,7.394,5.556,4.879,3.367l-.853.743L7.394,7.042l7.237-6.3ZM.615,4.11,3.984,7.042,4.837,6.3,1.469,3.367Z" transform="translate(-0.615)" fill="#f15a05"/>
+                                                </svg>         
                                             </div>
-                                            <picture>
-                                                <img src="{% static 'main/img/3-types/3-dom.jpg' %}" alt="">
-                                            </picture>
-                                        </div>
-                                        <div class="types-elem__description-block">
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/centimeter.svg' %}" alt=""></div>
-                                                <p>Ход - 34 мм</p>
-                                            </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/gauge.svg' %}" alt=""></div>
-                                                <p>Усилие - 100 кН</p>
-                                            </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/weight.svg' %}" alt=""></div>
-                                                <p>Вес - 200 кг</p>
-                                            </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/barbed-wire.svg' %}" alt=""></div>
-                                                <p>Скорость движения штока - 1000 мм/с</p>
-                                            </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/repeat.svg' %}" alt=""></div>
-                                                <p>Минимальный выступ арматуры - 4 мм</p>
-                                            </div>
-                                        </div>
+                                            <p>Проволока 5мм</p>
+                                        </div>                                                   
                                     </div>
-                                    <div class="types-elem__price">
-                                        <p>Цена:</p>
-                                        <h3>300 000 руб.</h3>
-                                        <button data-info="Блок: виды домкратов" class="button types-button button-click">заказать</button>
+                                    <picture>
+                                        <img src="{% static 'main/img/3-types/3-dom.jpg' %}" alt="">
+                                    </picture>
+                                </div>
+                                <div class="types-elem__description-block">
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/centimeter.svg' %}" alt=""></div>
+                                        <p>Ход - 34 мм</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/gauge.svg' %}" alt=""></div>
+                                        <p>Усилие - 100 кН</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/weight.svg' %}" alt=""></div>
+                                        <p>Вес - 200 кг</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/barbed-wire.svg' %}" alt=""></div>
+                                        <p>Скорость движения штока - 1000 мм/с</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/repeat.svg' %}" alt=""></div>
+                                        <p>Минимальный выступ арматуры - 4 мм</p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="types-elem__price">
+                                <p>Цена:</p>
+                                <h3>300 000 руб.</h3>
+                                <button data-info="Блок: виды домкратов" class="button types-button button-click">заказать</button>
+                            </div>
+                        </div>     
                     </div>
                 </div>
-                <div class="types-elem j-con-space-b">
+                <div class="types-elem uncover-elem j-con-space-b">
                     <div class="types-elem__title">
-                        <p>Канатное натяжение</p>
-                        <div class="types-elem__arrow triangle"></div>
+                        <p>Проволочное натяжение</p>
+                        <div class="types-elem__arrow uncover-elem__arrow"></div>
                         <picture>
                             <img src="{% static 'main/img/3-types/3-dom.jpg' %}" alt="">
                         </picture>
                     </div>
-                    <div class="types-elem__body">
-                            <div class="types-elem__block j-con-space-b">
-                                    <div class="types-elem__description">
-                                        <div class="types-elem__description-mobile">
-                                            <div class="types-elem__description-text">   
-                                                    <h4>Напрягаемый элемент</h4>                       
-                                                    <div class="list-icon">
-                                                        <div>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.016" height="7.042" viewBox="0 0 14.016 7.042">
-                                                                <path id="Vector" d="M11.221.743,10.367,0,6.544,3.331l.853.743ZM13.781,0,7.394,5.556,4.879,3.367l-.853.743L7.394,7.042l7.237-6.3ZM.615,4.11,3.984,7.042,4.837,6.3,1.469,3.367Z" transform="translate(-0.615)" fill="#f15a05"/>
-                                                            </svg>         
-                                                        </div>
-                                                        <p>Проволока 5мм</p>
-                                                    </div>                                                   
-                                                </div>
-                                                <picture>
-                                                    <img src="{% static 'main/img/3-types/3-dom.jpg' %}" alt="">
-                                                </picture>
-                                        </div>
-                                        
-                                        <div class="types-elem__description-block">
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/centimeter.svg' %}" alt=""></div>
-                                                <p>Ход - 34 мм</p>
+                    <div class="types-elem__body uncover-elem__body">
+                        <div class="types-elem__block j-con-space-b">
+                            
+                            <div class="types-elem__description">
+                                <div class="types-elem__description-mobile">
+                                    <div class="types-elem__description-text">   
+                                        <h4>Напрягаемый элемент</h4>                       
+                                        <div class="list-icon">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14.016" height="7.042" viewBox="0 0 14.016 7.042">
+                                                    <path id="Vector" d="M11.221.743,10.367,0,6.544,3.331l.853.743ZM13.781,0,7.394,5.556,4.879,3.367l-.853.743L7.394,7.042l7.237-6.3ZM.615,4.11,3.984,7.042,4.837,6.3,1.469,3.367Z" transform="translate(-0.615)" fill="#f15a05"/>
+                                                </svg>         
                                             </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/gauge.svg' %}" alt=""></div>
-                                                <p>Усилие - 100 кН</p>
-                                            </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/weight.svg' %}" alt=""></div>
-                                                <p>Вес - 200 кг</p>
-                                            </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/barbed-wire.svg' %}" alt=""></div>
-                                                <p>Скорость движения штока - 1000 мм/с</p>
-                                            </div>
-                                            <div class="list-icon types-elem__description-block-elem">
-                                                <div><img src="{% static 'main/img/icons/3-types/repeat.svg' %}" alt=""></div>
-                                                <p>Минимальный выступ арматуры - 4 мм</p>
-                                            </div>
-                                        </div>
+                                            <p>Проволока 5мм</p>
+                                        </div>                                                   
                                     </div>
-                                    <div class="types-elem__price">
-                                        <p>Цена:</p>
-                                        <h3>300 000 руб.</h3>
-                                        <button data-info="Блок: виды домкратов" class="button types-button button-click">заказать</button>
+                                    <picture>
+                                        <img src="{% static 'main/img/3-types/3-dom.jpg' %}" alt="">
+                                    </picture>
+                                </div>
+                                <div class="types-elem__description-block">
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/centimeter.svg' %}" alt=""></div>
+                                        <p>Ход - 34 мм</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/gauge.svg' %}" alt=""></div>
+                                        <p>Усилие - 100 кН</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/weight.svg' %}" alt=""></div>
+                                        <p>Вес - 200 кг</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/barbed-wire.svg' %}" alt=""></div>
+                                        <p>Скорость движения штока - 1000 мм/с</p>
+                                    </div>
+                                    <div class="list-icon types-elem__description-block-elem">
+                                        <div><img src="{% static 'main/img/icons/3-types/repeat.svg' %}" alt=""></div>
+                                        <p>Минимальный выступ арматуры - 4 мм</p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="types-elem__price">
+                                <p>Цена:</p>
+                                <h3>300 000 руб.</h3>
+                                <button data-info="Блок: виды домкратов" class="button types-button button-click">заказать</button>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

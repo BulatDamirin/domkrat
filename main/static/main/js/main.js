@@ -22,8 +22,8 @@ $(document).ready(function() {
         mobile = 720;
     
     if ($(window).width() > tablet) {
-        $('.comparison-elem:first').css('height', $('.comparison-elem:first').prop('scrollHeight')).addClass('comparison-elem-active');
-        $('.types-elem:first').css('height', $('.types-elem:first').prop('scrollHeight')).addClass('types-elem-active');
+        $('.comparison-elem:first').css('height', $('.comparison-elem__body:first').outerHeight(true)).addClass('uncover-elem-active');
+        $('.types-elem:first').css('height', $('.types-elem__body:first').outerHeight(true)).addClass('uncover-elem-active');
     }
 
     var csrfToken = $('[name=csrfmiddlewaretoken]').val();
@@ -201,43 +201,66 @@ $(document).ready(function() {
         }
     })
     
-    
-
-    $('.comparison-elem__title').click(function() {
-        var parent = $(this).parent();
-        var height = parent.prop('scrollHeight');
+    function uncoverElem(self, name) {
+        var parent = $(self).parent();
+        var body = $('.uncover-elem__body', parent);
+        var height = body.outerHeight(true)
+        console.log(height)
         if ($(window).width() <= tablet) {
-
-            if (parent.hasClass('comparison-elem-active')) {
-                parent.removeClass('comparison-elem-active').css('height', 50)
+            if (parent.hasClass('uncover-elem-active-mobile')) {
+                parent.removeClass('uncover-elem-active-mobile').css('height', 50)
             } else {
-                parent.addClass('comparison-elem-active')
-                parent.css('height', height);
-            }
-        } else {
-            $('.comparison-elem').removeClass('comparison-elem-active').css('height', 50);
-            parent.addClass('comparison-elem-active')
-            parent.css('height', height);
-        }
-        
-    })
-
-    $('.types-elem__title').click(function() {
-        var parent = $(this).parent();
-        var height = parent.get(0).scrollHeight;
-        if ($(window).width() <= tablet) {
-            if (parent.hasClass('types-elem-active-mobile')) {
-                parent.removeClass('types-elem-active-mobile').css('height', 50)
-            } else {
-                parent.addClass('types-elem-active-mobile')
-                parent.css('height', height)
+                parent.addClass('uncover-elem-active-mobile')
+                parent.css('height', height + $(self).outerHeight(true))
                 
             }
         } else {
-            $('.types-elem').removeClass('types-elem-active').css('height', 50);
-            parent.addClass('types-elem-active')
+            $('.' + name + '-elem').removeClass('uncover-elem-active').css('height', 50);
+            parent.addClass('uncover-elem-active')
             parent.css('height', height);
         }
+    }
+
+    $('.comparison-elem__title').click(function() {
+        uncoverElem(this, 'comparison')
+        // var parent = $(this).parent();
+        // var height = parent.prop('scrollHeight');
+        // if ($(window).width() <= tablet) {
+
+        //     if (parent.hasClass('comparison-elem-active')) {
+        //         parent.removeClass('comparison-elem-active').css('height', 50)
+        //     } else {
+        //         parent.addClass('comparison-elem-active')
+        //         parent.css('height', height);
+        //     }
+        // } else {
+        //     $('.comparison-elem').removeClass('comparison-elem-active').css('height', 50);
+        //     parent.addClass('comparison-elem-active')
+        //     parent.css('height', height);
+        // }    
+    })
+
+    
+
+    $('.types-elem__title').click(function() {
+        uncoverElem(this, 'types')
+        // var parent = $(this).parent();
+        // var block = $('.types-elem__block', parent);
+        // var height = parent
+        // console.dir(height)
+        // if ($(window).width() <= tablet) {
+        //     if (parent.hasClass('types-elem-active-mobile')) {
+        //         parent.removeClass('types-elem-active-mobile').css('height', 50)
+        //     } else {
+        //         parent.addClass('types-elem-active-mobile')
+        //         parent.css('height', height)
+                
+        //     }
+        // } else {
+        //     $('.types-elem').removeClass('types-elem-active').css('height', 50);
+        //     parent.addClass('types-elem-active')
+        //     parent.css('height', height);
+        // }
         
     })
 
