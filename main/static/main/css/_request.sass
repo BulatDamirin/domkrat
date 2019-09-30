@@ -1,5 +1,6 @@
 .request
-  background: #211C19
+  background: url('../img/request-bg.jpg') center no-repeat
+  background-size: cover
 
   .container
     text-align: center
@@ -19,12 +20,13 @@
     margin-top: 40px
   @media screen and ( max-width: $mobile )
     margin-top: 20px
+    padding: 0;
 
   .req-form
     display: flex
 
     input
-      border: 0
+      border: 1px solid transparent
       border-bottom: 1px solid $orange
       background: transparent
       padding: 5px
@@ -43,4 +45,8 @@
   .button
     border-radius: 0
     width: 20%
+
+    @media screen and ( max-width: $mobile )
+      width: 175px
+    
     

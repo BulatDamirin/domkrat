@@ -226,21 +226,30 @@
         transition: .3s all ease
         background: $white
         top: 45px
-        overflow: hidden
+        overflow: auto
         width: 100vw
         touch-action: pan-y pan-x
+
+        .navbar-menu-block 
+            overflow-y: scroll
+            height: auto
 
     &-list
         display: flex
         flex-direction: column
-        height: 100%
-        
-    @keyframes burger-open-top
-        50%
-            transform:translate3d(0,6px,0)
-        to
-            transform:translate3d(0,6px,0) rotate(45deg)
-            
+        padding: 0 2.5%
+        height: 1000px
+
+        a
+            color: $black
+            padding: 10px 0
+            font-size: 22px 
+            transition: .3s 
+            border-bottom: 1px solid transparent
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+            &:active
+                border-bottom: $border        
 
     &-active
         .navbar-menu-body
