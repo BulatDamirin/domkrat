@@ -1,9 +1,33 @@
 .appointment
     background: #EDEDED
 
+    .slick-prev
+        right: $slick-height
+        bottom: $slick-border-value / 2
+        z-index: 2
+    .slick-next
+        bottom: $slick-border-value / 2
+        right: 0
+        z-index: 2
+
+.appointment-main-block
+    @media screen and ( max-width: $tablet ) 
+        margin-top: 30px
+        padding-bottom: $slick-height + 10px
+
 .appointment-elem
     margin-top: 55px
     align-items: flex-start
+
+    @media screen and ( max-width: $tablet ) 
+        flex-direction: column  
+        margin: 0
+        padding: 0 15px
+        box-sizing: content-box
+
+    @media screen and ( max-width: $mobile ) 
+        flex-direction: column  
+        margin-top: 0  
 
     &__img
         border: 1px solid #949AA2
@@ -11,6 +35,9 @@
         box-sizing: border-box
         width: 25%
         display: inherit
+        position: relative
+        @media screen and ( max-width: $mobile ) 
+            width: 100%
         
         picture
             display: inherit
@@ -21,10 +48,14 @@
 
     &__description
         width: 73%
+        @media screen and ( max-width: $mobile ) 
+            width: 100%
         h3
             font-size: 24px
             font-weight: bold
             margin-bottom: 8px
+            @media screen and ( max-width: $mobile ) 
+                margin: 8px 0 6px 0
 
         p
             margin-bottom: 8px
@@ -32,6 +63,7 @@
 
         h4  
             font-size: 19px
-            font-weight: 600
+            font-weight: 500
             padding: 5px 0 5px 10px
             border-left: $border
+

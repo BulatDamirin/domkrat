@@ -18,12 +18,14 @@ $(document).ready(function() {
     }
     inputMask()
 
-    var tablet = 1200,
+    var tablet = 1150,
         mobile = 720;
     
     if ($(window).width() > tablet) {
         $('.comparison-elem:first').css('height', $('.comparison-elem__body:first').outerHeight(true)).addClass('uncover-elem-active');
         $('.types-elem:first').css('height', $('.types-elem__body:first').outerHeight(true)).addClass('uncover-elem-active');
+    } else {
+        $('.appointment-main-block').slick()
     }
 
     var csrfToken = $('[name=csrfmiddlewaretoken]').val();
@@ -33,7 +35,7 @@ $(document).ready(function() {
 
 
     function formSubmit() {
-        $('.form').on('submit', function(e) {
+        $('form').on('submit', function(e) {
             e.preventDefault ? e.preventDefault() : (e.returnValue = false);
             var data = formDataCollection(this);
             if (data) {
@@ -205,7 +207,6 @@ $(document).ready(function() {
         var parent = $(self).parent();
         var body = $('.uncover-elem__body', parent);
         var height = body.outerHeight(true)
-        console.log(height)
         if ($(window).width() <= tablet) {
             if (parent.hasClass('uncover-elem-active-mobile')) {
                 parent.removeClass('uncover-elem-active-mobile').css('height', 50)
@@ -222,46 +223,10 @@ $(document).ready(function() {
     }
 
     $('.comparison-elem__title').click(function() {
-        uncoverElem(this, 'comparison')
-        // var parent = $(this).parent();
-        // var height = parent.prop('scrollHeight');
-        // if ($(window).width() <= tablet) {
-
-        //     if (parent.hasClass('comparison-elem-active')) {
-        //         parent.removeClass('comparison-elem-active').css('height', 50)
-        //     } else {
-        //         parent.addClass('comparison-elem-active')
-        //         parent.css('height', height);
-        //     }
-        // } else {
-        //     $('.comparison-elem').removeClass('comparison-elem-active').css('height', 50);
-        //     parent.addClass('comparison-elem-active')
-        //     parent.css('height', height);
-        // }    
+        uncoverElem(this, 'comparison')  
     })
-
-    
-
     $('.types-elem__title').click(function() {
-        uncoverElem(this, 'types')
-        // var parent = $(this).parent();
-        // var block = $('.types-elem__block', parent);
-        // var height = parent
-        // console.dir(height)
-        // if ($(window).width() <= tablet) {
-        //     if (parent.hasClass('types-elem-active-mobile')) {
-        //         parent.removeClass('types-elem-active-mobile').css('height', 50)
-        //     } else {
-        //         parent.addClass('types-elem-active-mobile')
-        //         parent.css('height', height)
-                
-        //     }
-        // } else {
-        //     $('.types-elem').removeClass('types-elem-active').css('height', 50);
-        //     parent.addClass('types-elem-active')
-        //     parent.css('height', height);
-        // }
-        
+        uncoverElem(this, 'types')    
     })
 
     $('.price-type').click(function(){
@@ -274,6 +239,23 @@ $(document).ready(function() {
         }
     })
 
+    $('.navbar-menu-burger').click(function(e) {
+        var navbar = $('.navbar-menu')
+
+        if (!navbar.hasClass('navbar-menu-active')) {
+            $('.navbar-menu-body').height(window.innerHeight - 45)
+            navbar.addClass('navbar-menu-active');
+        }
+        else {
+            navbar.removeClass('navbar-menu-active');
+        }
+        
+    })
+
+    $('.language-swich').click(function() {
+        $(this).toggleClass('language-swich-active')
+    })
+    
 });
 
 

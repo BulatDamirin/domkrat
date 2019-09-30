@@ -3,6 +3,10 @@
     position: relative
     z-index: 2
 
+@media screen and ( max-width: $tablet )
+    .container-header
+        width: 100%
+
 .navbar
     height: 80px
     display: flex
@@ -49,9 +53,7 @@
 
 .messenger-number-active
     opacity: 1
-    transform: perspective(1000px) rotate3d(180,0,0,0deg);
-        
-        
+    transform: perspective(1000px) rotate3d(180,0,0,0deg) 
 
 .navbar-logo 
     display: flex
@@ -95,16 +97,25 @@
 
     &__language
         margin-right: 50px
+        cursor: auto
 
         a
-            color: #fff
+            color: $white
             font-weight: 300
             font-size: 18px
             text-transform: uppercase
             margin-right: 10px
+            cursor: pointer
+
+            &:hover
+                color: #fff
+                font-weight: 400
     
         .language-main
             font-weight: bold
+            &:hover
+                color: #fff
+                font-weight: boldf
 
     &__email 
         color: #F15A05
@@ -130,3 +141,178 @@
         font-size: 12px
         font-weight: 300
         color: #ECECEC
+
+
+.mobile-navbar
+    &-top
+        z-index: 5     
+        background: #2B2B2C
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        touch-action: none
+        &__block
+            align-items: center
+            height: 45px
+
+    &-bottom
+        background: white
+        margin-top: 45px
+        border-bottom: 1px solid #E5E5E5
+
+        &__block
+            align-items: center
+            height: 40px
+
+        &-phone
+            a
+                font-weight: bold
+                color: #50555B
+
+        &-messenger
+            width: 30%
+            max-width: 200px
+            height: 80%
+
+            &__elem
+                width: 30%
+                height: auto
+
+            img
+                height: 100%
+
+    svg
+        height: 30px
+
+
+.navbar-menu
+    width: 25%
+    &-burger
+        width: 55px
+        padding: 10px 30px 10px 0
+        height: 45px    
+        display: flex
+        align-items: center
+            
+
+    &__strip
+        position: relative
+
+
+        &::after, &::before,
+            content: ''
+            position: absolute
+            transition: .3s cubic-bezier(0, 0.96, 0.58, 1)
+
+        &::after, &::before, &
+            transition-duration: 0
+            display: block
+            border-radius: 2px
+            width: 100%
+            height: 4px
+            background: $white
+
+        &::before
+            top: -8px
+
+        &::after
+            bottom: -8px
+
+    &-body
+        position: absolute
+        left: -100%
+        height: calc(100vh - 45px)
+        transition: .3s all ease
+        background: $white
+        top: 45px
+        overflow: hidden
+        width: 100vw
+        touch-action: pan-y pan-x
+
+    &-list
+        display: flex
+        flex-direction: column
+        height: 100%
+        
+    @keyframes burger-open-top
+        50%
+            transform:translate3d(0,6px,0)
+        to
+            transform:translate3d(0,6px,0) rotate(45deg)
+            
+
+    &-active
+        .navbar-menu-body
+            left: 0
+
+        .navbar-menu__strip
+            &
+                background: transparent
+
+            &::before
+                transform: rotate(45deg)
+                top: 0
+
+            &::after
+                transform: rotate(-45deg)
+                bottom: 0
+
+
+.language-swich
+    width: 25%
+    text-transform: uppercase
+    text-align: right
+
+    &-block
+        position: relative
+        display: inline-block
+        
+
+    &-button
+        font-weight: 500
+        position: relative
+        display: flex
+        align-items: center
+    
+    $px: 3px
+
+    &-triangle
+        width: 0
+        height: 0
+        border-left: 4px solid transparent
+        border-right: 4px solid transparent
+        border-top: 6px solid $orange
+        margin-left: 7px
+        transition: .3s
+
+
+    &-list
+        display: flex
+        background: $white
+        padding: 5px 0
+        flex-direction: column
+        position: absolute
+        font-size: 22px   
+        right: 0
+        transition: .3s ease
+        top: 50px
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+        opacity: 0
+        visibility: hidden
+
+        a
+            color: $black
+            padding: 5px 20px
+
+    &-active
+
+        .language-swich-list
+            top: 40px
+            opacity: 1
+            visibility: visible
+        
+        .language-swich-triangle
+            transform: rotate(180deg) 
+
+

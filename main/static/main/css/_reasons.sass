@@ -1,0 +1,187 @@
+.reasons
+  background: #F1F3FA
+
+.reasons-main-block
+  margin-top: 70px
+
+  @media screen and ( max-width: $tablet)
+    margin-top: 50px
+  
+  @media screen and ( max-width: $mobile )
+    margin-top: 35px
+
+.reasons-black-bg
+  background: #221E1B
+.reasons-brown-bg
+  background: #3A3330
+  padding: 60px 0
+  margin-bottom: 60px
+
+  @media screen and ( max-width: $tablet)   
+    margin-bottom: 50px
+
+  @media screen and ( max-width: $mobile )
+    margin-bottom: 30px
+    padding: 40px 0
+
+.reasons-elem
+  width: 100%
+  overflow: hidden
+  margin-bottom: 60px
+
+  @media screen and ( max-width: $tablet)   
+    margin-bottom: 50px
+
+  @media screen and ( max-width: $mobile )
+    margin-bottom: 30px
+  
+  &.reasons-white
+    background: #fff
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25)
+    border-radius: 5px
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+
+    &:nth-child(even)
+      @media screen and ( min-width: $mobile )   
+        flex-direction: row-reverse 
+
+    @media screen and ( max-width: $mobile )
+      flex-direction: column
+
+  
+  &-img
+      width: 48%
+      min-height: 285px
+      position: relative
+      @media screen and ( max-width: $mobile )
+        height: 200px
+        min-height: 0px
+        width: 100%
+      @media screen and ( max-width: $mobile/1.5 )
+        height: 150px
+
+  .img-1
+    background: url('../img/img-1.jpg') center no-repeat
+    background-size: cover
+    background-position-y: bottom
+
+  &-number
+    position: absolute
+    top: 10px
+    left: 10px
+    width: 40px
+    height: 40px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    border-radius: 50%
+    background: #ffffff
+    text-align: center
+    line-height: 40px
+    font-weight: 500
+
+  &-description
+    width: 52%
+    padding: 0 40px
+    display: flex
+    align-items: center
+    @media screen and ( max-width: $mobile )
+        width: 100%
+        padding: 15px 10px
+
+    h3
+      color: $orange
+      font-family: $play
+      font-size: 22px
+      font-weight: bold 
+      margin-bottom: 14px
+      
+    p
+      font-size: 17px
+      margin-bottom: 12px
+
+    span
+      font-weight: 500
+  
+.reasons-black
+  display: flex
+  justify-content: space-between
+  flex-direction: row-reverse   
+  color: $white
+  padding: 60px 0
+
+  @media screen and ( max-width: $mobile )
+    flex-direction: column
+    padding: 40px 0
+
+  &-instruction
+    display: flex
+    justify-content: space-between
+
+    p
+      font-size: 15px
+      margin-bottom: 5px
+
+    &__elem
+      width: 47%
+
+  .reasons-elem-number
+    color: $black
+  .reasons-elem-img
+    width: 45%
+    margin: 20px
+    border-radius: 5px
+    @media screen and ( max-width: $tablet )
+      width: 50%
+    @media screen and ( max-width: $mobile )
+      margin: 0 0 20px 0
+      width: 100%
+
+  .reasons-elem-description
+    width: 50%
+    padding: 0
+    @media screen and ( max-width: $tablet )
+      width: 50%
+    @media screen and ( max-width: $mobile )
+      width: 100%
+
+.reasons-brown
+  display: flex
+  justify-content: space-between
+  flex-direction: row-reverse
+  color: $white
+  margin-bottom: 40px
+
+  @media screen and ( max-width: $mobile )
+    margin-bottom: 20px
+    flex-direction: column
+
+  &:nth-child(even)
+    @media screen and ( min-width: $mobile )
+      flex-direction: row
+
+  &:nth-child(2)
+    margin: 0
+
+  .reasons-elem-number
+    color: $black
+
+  .reasons-elem-img
+    width: 55%
+    border-radius: 5px
+    @media screen and ( max-width: $tablet )
+      width: 45%
+    @media screen and ( max-width: $mobile )
+      width: 100%
+
+  .reasons-elem-description
+    width: 40%
+    padding: 0
+    @media screen and ( max-width: $tablet )
+      width: 50%
+    @media screen and ( max-width: $mobile )
+      width: 100%
+
+
+      
+    

@@ -1,0 +1,46 @@
+.request
+  background: #211C19
+
+  .container
+    text-align: center
+
+  &-main-block
+    display: inline-block
+    margin: 0 auto
+
+.request-form
+  margin-top: 60px
+  background: #fff
+  border-radius: 30px
+  overflow: hidden
+  padding-left: 30px
+
+  @media screen and ( max-width: $tablet )
+    margin-top: 40px
+  @media screen and ( max-width: $mobile )
+    margin-top: 20px
+
+  .req-form
+    display: flex
+
+    input
+      border: 0
+      border-bottom: 1px solid $orange
+      background: transparent
+      padding: 5px
+
+  .form__input
+    display: flex
+    flex-direction: row
+
+    &-phone
+      margin-left: 20px
+
+      .input-phone
+        margin-left: 10px
+        margin-right: 30px
+
+  .button
+    border-radius: 0
+    width: 20%
+    

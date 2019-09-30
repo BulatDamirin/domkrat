@@ -5,25 +5,11 @@ $orange: #F15A05
 $white: #F2F2F2   
 $border: 2px solid $orange
 $mobile: 719px
-$tablet: 1199px
+$tablet: 1149px
 
-.new-elem
-    position: fixed
-    touch-action: pan-y
-    top: 0
-    width: 90%
-    left: 5%
+*
     box-sizing: border-box
-    background: #fff
-    z-index: 5
-    overflow: hidden
-
-.margin
-    height: 2%
-    width: 100%
-    position: absolute
-    bottom: -.5px
-
+    outline: none
 
 body
     margin: 0
@@ -46,9 +32,6 @@ img, video
 
 p, h1, h2, h3, h4
     margin: 0
-
-input, button, img, a, picture, video
-    outline: none
 
 a 
     text-decoration: none
@@ -331,6 +314,40 @@ section
         @media screen and ( max-width: $mobile )
             font-size: 20px
 
+$slick-border-value: 10px
+$slick-border: $slick-border-value solid $orange
+$slick-height: 40px
+
+.slick-prev, .slick-next
+    position: absolute
+    width: $slick-height
+    height: $slick-height
+    cursor: pointer
+    color: transparent
+    padding: 0
+    background: transparent
+    border: 0   
+    &:active
+        transform: scale(.8)
+
+.slick-prev::after, .slick-next::after
+    position: absolute
+    content: ''
+    width: 0
+    height: 0
+    border: $slick-border-value solid transparent
+    border-top: $slick-border
+    border-left: $slick-border
+    left: ($slick-height - 2*$slick-border-value) / 2
+    top: ($slick-height - 2*$slick-border-value) / 2
+
+    
+
+.slick-prev::after
+    transform: rotate(-45deg)
+.slick-next::after
+    transform: rotate(135deg)
+
 
 @import header
 @import head
@@ -340,7 +357,8 @@ section
 @import price
 @import experience
 @import reviews
-    
+@import reasons
+@import request
 
 
 
