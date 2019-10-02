@@ -220,25 +220,23 @@
             bottom: -8px
 
     &-body
-        position: absolute
+        position: fixed
         left: -100%
-        height: calc(100vh - 45px)
+        height: calc(100% - 45px)
+        top: 45px
         transition: .3s all ease
         background: $white
-        top: 45px
-        overflow: auto
+        bottom: 0
+        margin: 0
+        // padding: 0 2.5% 25px 2.5%
+        padding: 25px
+        overflow-y: auto
         width: 100vw
         touch-action: pan-y pan-x
-
-        .navbar-menu-block 
-            overflow-y: scroll
-            height: auto
 
     &-list
         display: flex
         flex-direction: column
-        padding: 0 2.5%
-        height: 1000px
 
         a
             color: $black
@@ -323,5 +321,3 @@
         
         .language-swich-triangle
             transform: rotate(180deg) 
-
-

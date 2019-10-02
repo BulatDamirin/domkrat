@@ -239,15 +239,34 @@ $(document).ready(function() {
         }
     })
 
+    var menu = {
+        open: function() {
+            var navbar = $('.navbar-menu')
+            navbar.addClass('navbar-menu-active');
+        },
+        close: function() {
+            var navbar = $('.navbar-menu')
+            navbar.removeClass('navbar-menu-active');
+        }
+    }
+
+    $(window).resize(function() {
+        
+        if ($('.navbar-menu').hasClass('navbar-menu-active')) {
+            $('.navbar-menu-block').height(window.innerHeight - 45);
+        }
+    })
+    
+
     $('.navbar-menu-burger').click(function(e) {
         var navbar = $('.navbar-menu')
 
         if (!navbar.hasClass('navbar-menu-active')) {
-            $('.navbar-menu-body').height(window.innerHeight - 45)
-            navbar.addClass('navbar-menu-active');
+            menu.open();
         }
         else {
-            navbar.removeClass('navbar-menu-active');
+            menu.close();
+            htmlBody.scroll();
         }
         
     })

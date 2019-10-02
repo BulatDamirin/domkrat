@@ -4,9 +4,15 @@
   outline: none;
 }
 
-body {
+body, html {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+body {
   font-size: 18px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
@@ -832,22 +838,20 @@ section {
 }
 
 .navbar-menu-body {
-  position: absolute;
+  position: fixed;
   left: -100%;
-  height: calc(100vh - 45px);
+  height: calc(100% - 45px);
+  top: 45px;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
   background: #F2F2F2;
-  top: 45px;
-  overflow: auto;
+  bottom: 0;
+  margin: 0;
+  padding: 25px;
+  overflow-y: auto;
   width: 100vw;
   -ms-touch-action: pan-y pan-x;
       touch-action: pan-y pan-x;
-}
-
-.navbar-menu-body .navbar-menu-block {
-  overflow-y: scroll;
-  height: auto;
 }
 
 .navbar-menu-list {
@@ -858,8 +862,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 2.5%;
-  height: 1000px;
 }
 
 .navbar-menu-list a {
@@ -2070,14 +2072,6 @@ section {
   font-size: 18px;
 }
 
-.price-main-image {
-  display: inherit;
-}
-
-.price-main-image picture, .price-main-image img {
-  display: inherit;
-}
-
 @media screen and (max-width: 719px) {
   .price-main-image {
     width: 65%;
@@ -2114,7 +2108,6 @@ section {
 }
 
 .price-side-images__elem {
-  display: inherit;
   width: 47%;
 }
 
@@ -2541,6 +2534,10 @@ section {
   }
 }
 
+.reasons-elem-description__body {
+  width: 100%;
+}
+
 .reasons-elem-description h3 {
   color: #F15A05;
   font-family: "Play", sans-serif;
@@ -2759,6 +2756,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .request-form .req-form input {
@@ -2776,6 +2776,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 78%;
 }
 
 .request-form .form__input-phone {
