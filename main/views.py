@@ -13,3 +13,6 @@ def kz_view(request):
 def uz_view(request):
     return HttpResponse('<h1>uz</h1> страница')
 
+def confidentiality_view(request):
+    return render(request, 'main/confidentiality.html', {})
+

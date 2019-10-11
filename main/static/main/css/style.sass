@@ -54,7 +54,7 @@ section
     display: none !important
 
 .hide-on-desctop
-    @media screen and (min-width: $tablet)
+    @media screen and (min-width: $tablet + 1px)
         display: none !important
 
 .hide-on-mobile
@@ -66,11 +66,11 @@ section
         display: none !important      
 
 .show-in-mobile
-    @media screen and (min-width: $mobile)
+    @media screen and (min-width: $mobile + 1px)
         display: none !important
 
 .show-in-tablet
-    @media screen and (min-width: $tablet)
+    @media screen and (min-width: $tablet + 1px)
         display: none !important
 
 
@@ -364,6 +364,8 @@ $slick-height: 40px
 @import reviews
 @import reasons
 @import request
+@import contact
+@import footer
 
 
 

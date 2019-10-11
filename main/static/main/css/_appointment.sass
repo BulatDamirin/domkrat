@@ -2,27 +2,23 @@
     background: #EDEDED
 
     .slick-prev
-        right: $slick-height
-        bottom: $slick-border-value / 2
+        top: 50%
         z-index: 2
     .slick-next
-        bottom: $slick-border-value / 2
+        top: 50%
         right: 0
         z-index: 2
 
 .appointment-main-block
     @media screen and ( max-width: $tablet ) 
         margin-top: 30px
-        padding-bottom: $slick-height + 10px
 
 .appointment-elem
     margin-top: 55px
     align-items: flex-start
 
-    @media screen and ( max-width: $tablet ) 
-        flex-direction: column  
+    @media screen and ( max-width: $tablet )   
         margin: 0
-        padding: 0 15px
         box-sizing: content-box
 
     @media screen and ( max-width: $mobile ) 
@@ -67,3 +63,28 @@
             padding: 5px 0 5px 10px
             border-left: $border
 
+    
+@media screen and ( max-width: $tablet )
+    .block-for-slider
+        width: 100%
+        position: relative
+
+    .viewport-slider
+        width: 100%
+        position: relative
+        overflow: hidden
+
+    .wrapper-slider
+        display: flex
+        justify-content: space-around
+        position: relative
+        width: calc(100%*3)
+        top: 0
+        left: 0
+        margin: 0
+        padding: 0
+        transition: 1s
+
+        .appointment-elem
+            width: 95vw
+            transform: translateX(-200%)

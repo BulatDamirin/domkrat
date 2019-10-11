@@ -1,0 +1,104 @@
+.contact
+    padding-bottom: 0
+    
+.maps
+    height: 500px
+    max-height: 65vh
+    margin-top: 50px
+    
+    @media screen and ( max-width: $tablet )
+        height: 50vh
+        margin-top: 30px
+
+.contact-main-block
+    margin-top: 70px
+
+    @media screen and ( max-width: $tablet )
+        margin-top: 50px
+
+    @media screen and ( max-width: $mobile )
+        margin-top: 35px
+
+.contact-info
+    display: flex
+    justify-content: space-between
+
+    
+
+    &-body
+        display: flex
+        justify-content: space-between
+
+        @media screen and ( max-width: $tablet )
+            flex-direction: column
+
+    h3
+        font-weight: bold
+        margin-bottom: 8px
+
+    .circle
+        border-radius: 50%
+        background: $orange
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .data-circle
+        height: 40px
+        width: 40px
+
+        @media screen and ( max-width: $mobile )
+            height: 30px
+            width: 30px
+
+    svg
+        height: 65%
+        width: auto
+
+    &-data
+        display: flex
+        @media screen and ( max-width: $tablet )
+            flex-wrap: wrap
+
+        @media screen and ( max-width: 500px )
+            flex-direction: column
+            
+        &__elem 
+            display: flex
+            margin-right: 40px
+
+            @media screen and ( max-width: $tablet )
+                margin-bottom: 40px
+
+            @media screen and ( max-width: 500px )
+                margin-right: 0
+        
+        .contact-data-description
+            margin-left: 15px
+
+    &-messengers   
+
+        &__body
+            @media screen and ( max-width: $tablet )
+                display: flex
+
+            @media screen and ( max-width: 350px )
+                display: block
+
+        a
+            display: flex
+            align-items: center
+            margin-bottom: 6px
+            color: $black
+
+            @media screen and ( max-width: $tablet )
+                margin-right: 25px
+
+            @media screen and ( max-width: 350px )
+                margin-right: 0
+
+        .mes-circle
+            height: 30px
+            width: 30px
+        p
+            margin-left: 5px
